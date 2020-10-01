@@ -29,3 +29,19 @@
     border-radius: 50%;
     margin-top:80px ;
 }
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textAreaModal{
+  width: 100%;
+  resize: none;
+}
+
+.vertical-timeline::before {
+  background: black;
+}

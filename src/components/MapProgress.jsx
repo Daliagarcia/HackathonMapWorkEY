@@ -1,14 +1,14 @@
 import React from "react";
+import SignOff from "../components/SignOff";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import AccessAlarmsIcon from '@material-ui/icons/AccessAlarms';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-/* import "../css/timeline.css"; */
-import { CheckBox } from "@material-ui/icons";
 
+import { CheckBox } from "@material-ui/icons";
+import "../css/emap.css"
 
 const completedTaskStyles = {
   contentStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
@@ -19,15 +19,20 @@ const completedTaskStyles = {
 const incompletedTaskStyles = {
   contentStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
   contentArrowStyle: { borderRight: "7px solid  rgb(33, 150, 243)" },
-  iconStyle: { background: "red", color: "#fff", icon:'AccessAlarmsIcon' }
+  iconStyle: { background: "red", color: "#fff" },
 };
 
-const MapProgress = ({ tasks = [], onTaskChange }) => {
-  const oncheckBoxChange = (value, taskId)=> {
+export const MapProgress = ({ tasks = [], onTaskChange, handleOpen}) => {
+  const oncheckBoxChange = (value, task)=> {
     const checked = value === "on" ? true : false
-     if ( onTaskChange ){
-      onTaskChange (checked, taskId)
+
+    if (checked){
+      handleOpen(task)
     }
+
+    //  if ( onTaskChange ){
+    //   onTaskChange (checked, taskId)
+    // }
   }
   return (
     <div>
@@ -37,11 +42,8 @@ const MapProgress = ({ tasks = [], onTaskChange }) => {
           const styles = task.completed ? completedTaskStyles : incompletedTaskStyles
           return (
             <VerticalTimelineElement key={index}
-              position="right"
               className="vertical-timeline-element--work"
-              /* icon={<AccessAlarmsIcon/>} */
-              /* icon={<FontAwesomeIcon icon="address-card" />} */
-              date="20/09/2020"
+              icon={<FontAwesomeIcon icon="address-card" />}
               {...styles}>
               <h3 className="vertical-timeline-element-title">
                 {task.nameTask}
@@ -51,12 +53,11 @@ const MapProgress = ({ tasks = [], onTaskChange }) => {
               </p>
               <input 
                 type = "checkbox"
-                onChange = {(event)=> oncheckBoxChange(event.target.value, task.id)} />
+                onChange = {(event)=> oncheckBoxChange(event.target.value, task)} />
             </VerticalTimelineElement>
           );
         })}
-      </VerticalTimeline>
-
+      </VerticalTimeline>      
     </div>
   );
 };
