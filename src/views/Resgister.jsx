@@ -8,6 +8,9 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import DateFnsUtils from '@date-io/date-fns';
 import Button from '@material-ui/core/Button';
+import NavbarPage from '../leaderViews/NavbarPage';
+import Footer from '../components/Footer';
+import '../css/register.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -102,6 +105,8 @@ const Resgister = (props) => {
 
   return (
     <>
+    <NavbarPage/>
+    <div className="contInfoRegister">
     <form className={classes.root} noValidate autoComplete="off"
     onSubmit={procesarDatos}  
     style={{
@@ -111,8 +116,9 @@ const Resgister = (props) => {
       marginTop: '144px',
     }}>
         <div className="alert alert-danger">{error}</div>
+        <p>Nombre de</p>
           <TextField
-            label="Nombre"
+            label="Escribe aqui tu nombre"
             id="outlined-size-small"
             /* defaultValue="Small"  */
             variant="outlined"
@@ -120,8 +126,9 @@ const Resgister = (props) => {
             onChange={e => setName(e.target.value)}
             value={name} 
           />
+          <p>E-mail</p>
           <TextField
-            label="Correo Electrónico"
+            label="example@ey.com"
             id="outlined-size-small"
           /*  defaultValue="Small" */
             variant="outlined"
@@ -130,8 +137,9 @@ const Resgister = (props) => {
             value={email} 
             type="email"
           />
+          <p>Escribe tu</p>
           <TextField
-            label="Contraseña"
+            label="Escribe aqui tu contraseña"
             id="outlined-size-small"
           /*  defaultValue="Small" */
             variant="outlined"
@@ -168,10 +176,12 @@ const Resgister = (props) => {
               }}
             />
         </MuiPickersUtilsProvider>
-        <Button variant="contained" color="secondary" onClick={() => register()}>
-          Registrar
+        <Button variant="contained" className="btnregisterUser" onClick={() => register()}>
+          Registrarse
         </Button>
       </form>
+      </div>
+      <Footer/>
     </>
   )
 }
