@@ -19,8 +19,22 @@ import Feedback from './leaderViews/FeedBack';
 import Menu  from './components/Menu';
 import Task from './leaderViews/Task';
 import AddTaks from './components/AddTaks';
+import EMenu from './employeeViews/EMenu';
+import EmployeeMap from './components/EmployeeMap';
+import { auth} from './firebase'
 
 function App() {
+
+  React.useEffect(() => {
+    auth.onAuthStateChanged(user => {
+        if(user){
+            console.log('user', user)
+        }else{
+            console.log('no user')
+        }
+    })
+}, ) 
+
   return (
     <Router>
       <Switch>
@@ -54,6 +68,9 @@ function App() {
         <Route path="/Feedback">
           <Feedback/>
         </Route>
+        <Route path="/EmployeeMenu">
+          <EMenu />
+        </Route>
         <Route path="/EmployeeTeam">
           <ETeam/>
         </Route>
@@ -66,10 +83,12 @@ function App() {
         <Route path="/EmployeeProfile">
           <EProfile/>
         </Route>
-        <Route path="/EmployeeMap">
+{/*         <Route path="/EmployeeMap">
           <EMap/>
-        </Route>
-        <Route path="/EmployeeFeedBack">
+        </Route> */}
+        <Route path="/EmployeeMap">
+          <EmployeeMap />
+        </Route>       <Route path="/EmployeeFeedBack">
          <EFeedBack/>
         </Route>
         <Route path="/Menu">

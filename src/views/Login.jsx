@@ -43,7 +43,7 @@ const Login = (props) => {
                   if (user.perfil === "lider"){
                   props.history.push("/Menu")
                 } else {
-                    props.history.push('/EmployeeMap')
+                    props.history.push('/EmployeeMenu')
                 }  
               }) 
              } catch (error) {
