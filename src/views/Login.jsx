@@ -90,11 +90,16 @@ const Login = (props) => {
                                   onChange={e => setPass(e.target.value)}
                                   value={pass} />
                           </div>
-                          <div>
+                          <div style={{displey:'flex', flexDirection: 'column', width:'200px'}}>
                               <button
                               className="btnIniSesion"
                                   onClick={() => login()}
-                              >Iniciar sesion</button>
+                              >Iniciar sesión</button>
+                               <Link to="/">
+                                    <button
+                                    className="btnIniSesion"
+                                    >Volver</button>
+                              </Link>
                           </div>
                           {/* <div>
                           <Link to="/password"> <p>¿Olvidó su Contraseña? </p></Link>

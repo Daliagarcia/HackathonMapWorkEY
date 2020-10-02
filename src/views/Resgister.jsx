@@ -3,7 +3,7 @@ import 'date-fns';
 import { db, auth } from '../firebase'
 import { makeStyles} from '@material-ui/core/styles';
 import {MuiPickersUtilsProvider,KeyboardDatePicker} from '@material-ui/pickers';
-import TextField from '@material-ui/core/TextField';
+import { Link } from 'react-router-dom'
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import DateFnsUtils from '@date-io/date-fns';
@@ -147,7 +147,7 @@ const Resgister = (props) => {
             value={email} 
             type="email"
           />
-          <p className="titleRegister">ESCRIBE TU CONTRASENA</p>
+          <p className="titleRegister">ESCRIBE TU CONTRASEÑA</p>
           <input
             type="text"
             placeholder="Escribe aqui tu contraseña"
@@ -199,9 +199,14 @@ const Resgister = (props) => {
 
 
         </MuiPickersUtilsProvider>
-        <Button variant="contained" className="btnregisterUser" onClick={() => register()}>
+        <Button variant="contained" className="btnIniSesion" onClick={() => register()}>
           Registrarse
         </Button>
+        <Link to="/">
+            <button
+            className="btnIniSesion"
+            >Volver</button>
+        </Link>
       </form>
       </div>
       <Footer/>

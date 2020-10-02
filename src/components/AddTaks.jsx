@@ -156,9 +156,9 @@ const AddTaks = () => {
         </div>
 
         <div>
-        <button type="button" onClick={handleOpen}>
+{/*         <button type="button" onClick={handleOpen}>
         react-transition-group
-      </button>
+      </button> */}
           <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
@@ -169,9 +169,9 @@ const AddTaks = () => {
           >
             <Fade in={open}>
               <div className={classes.paper}>
-                <h2 id="transition-modal-title">Transition modal</h2>
+                <h2 id="transition-modal-title">SINGLE</h2>
                 <p id="transition-modal-description">
-                  react-transition-group animates me.
+                <p>Manuel Díaz</p>
                 </p>
               </div>
             </Fade>

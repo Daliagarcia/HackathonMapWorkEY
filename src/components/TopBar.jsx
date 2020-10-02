@@ -3,7 +3,7 @@ import '../css/topbar.css'
 const TopBar = () => {
     return (
         <div className="topbar">
-            <h1 className="titleTopBar">INICIA SESION</h1>
+            <h1 className="titleTopBar">INICIA SESIÓN</h1>
         </div>
     )
 }
