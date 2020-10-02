@@ -1,0 +1,14 @@
+.topBarRegister{
+    width: 100%;
+    height: 57px;
+    background-color: #19181E;
+    position: fixed;
+    top: 0px;
+}
+
+.titleTopBarRegister{
+color: yellow;
+font-size: 18px;
+margin-top: 15px;
+margin-left: 5px;
+}

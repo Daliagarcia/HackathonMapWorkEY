@@ -2,8 +2,9 @@ import React, { Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Footer from '../components/Footer'
 import { db, auth } from '../firebase'
-import NavbarPage from '../leaderViews/NavbarPage'
+//import NavbarPage from '../leaderViews/NavbarPage'
 import '../css/login.css'
+import TopBar from '../components/TopBar'
 
 
 const Login = (props) => {
@@ -63,7 +64,8 @@ const Login = (props) => {
 
     return (
         <Fragment>
-            <NavbarPage/>
+            {/* <NavbarPage/> */}
+            <TopBar/>
                <div className="contLogin">
                   <div >
                       <form onSubmit={procesarDatos} className="formLogin" >
@@ -94,12 +96,12 @@ const Login = (props) => {
                                   onClick={() => login()}
                               >Iniciar sesion</button>
                           </div>
-                          <div>
+                          {/* <div>
                           <Link to="/password"> <p>¿Olvidó su Contraseña? </p></Link>
                           </div>
                           <div>
                           <Link to='/registro' ><button id="botonRegistrate" className="btnIniSesion"> Registro</button></Link>
-                          </div>
+                          </div> */}
                       </form>
                   </div>
               </div> 

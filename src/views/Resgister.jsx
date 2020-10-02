@@ -8,9 +8,11 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import DateFnsUtils from '@date-io/date-fns';
 import Button from '@material-ui/core/Button';
-import NavbarPage from '../leaderViews/NavbarPage';
+//import NavbarPage from '../leaderViews/NavbarPage';
 import Footer from '../components/Footer';
 import '../css/register.css'
+import TopBar from '../components/TopBar';
+import TopBarRegister from '../components/TopBarRegister';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -105,7 +107,8 @@ const Resgister = (props) => {
 
   return (
     <>
-    <NavbarPage/>
+    {/* <NavbarPage/> */}
+    <TopBarRegister/>
     <div className="contInfoRegister">
     <form className={classes.root} noValidate autoComplete="off"
     onSubmit={procesarDatos}  
