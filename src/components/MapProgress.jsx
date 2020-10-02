@@ -65,11 +65,11 @@ export const MapProgress = ({ tasks = [], onTaskChange, handleOpen}) => {
         })}
       </VerticalTimeline>     
       <div className="contButtonMap">
-        <NavLink to='/Menu'>
+{/*         <NavLink to='/Menu'>
           <button className="btnVolver">
             Volver
           </button>
-        </NavLink>
+        </NavLink> */}
         <NavLink to='/Canje'>
           <button className="btncanjear">
             Canjear Premio

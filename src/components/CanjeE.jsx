@@ -9,6 +9,7 @@ import Modal from '@material-ui/core/Modal';
 import Fade from '@material-ui/core/Fade';
 import happy from '../img/happy.png'
 import { NavLink} from 'react-router-dom'
+import ENavbar from '../employeeViews/ENavbar';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2, 4, 3),
     },
   }));
-const Canje = () => {
+const CanjeE = () => {
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {
@@ -38,7 +39,7 @@ const Canje = () => {
     const classes = useStyles();
     return (
         <>
-        <NavbarPage />
+        <ENavbar />
         <div className="contgeneralpremio">
             <h2>Canjea tus premios</h2>
 
@@ -103,4 +104,4 @@ const Canje = () => {
     )
 }
 
-export default Canje
+export default CanjeE

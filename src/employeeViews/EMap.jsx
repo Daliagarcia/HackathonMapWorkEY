@@ -47,7 +47,7 @@ const EMap = () => {
     <>
     <div>
       <h1>Aquí verás el mapa de trabajo</h1>
-      <SignOff />
+  
       {
         tareas.map(item =>
           <>

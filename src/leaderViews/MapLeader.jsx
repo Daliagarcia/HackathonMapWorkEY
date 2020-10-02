@@ -9,7 +9,6 @@ const MapLeader = () => {
     <div>
       <NavbarPage/>
       <EmployeeMap />
-      <SignOff />
     </div>
   )
 }

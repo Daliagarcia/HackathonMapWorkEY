@@ -16,8 +16,13 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     margin-bottom: 20px;
+    padding: 5px;
 }
 
 .starcanje{
     width: 40px;
+}
+
+.MuiSvgIcon-root {
+    margin: 10px !important;
 }

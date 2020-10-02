@@ -1,7 +1,7 @@
 import React from 'react'
 import { auth, db} from '../firebase'
 import firebase from 'firebase';
-import imgPerfil from '../img/perfil.png'
+import imgPerfil from '../img/single.png'
 import '../css/profile.css'
 import Footer from '../components/Footer';
 import ENavbar from './ENavbar';
@@ -12,7 +12,7 @@ const EProfile = () => {
   const [name, setName] = React.useState([])
 
   //funcion para actualizar el nombre y fotografia del usuario
-  React.useEffect(() => { 
+ /*  React.useEffect(() => { 
     const updateProfileE = () => {
       var user = firebase.auth().currentUser;
       user.updateProfile({
@@ -25,7 +25,7 @@ const EProfile = () => {
       });
     }
     updateProfileE()
-  })
+  }) */
 
 
     React.useEffect(() => { 
@@ -51,7 +51,7 @@ const EProfile = () => {
             </div>
             <div className="contTextProfile">
               <div>
-          <p className="textProfile1 textProfile"></p>
+          <p className="textProfile1 textProfile">Manuel Díaz</p>
                  <p className="textProfile2 textProfile">Ingeniero RRHH</p>
               </div>
             </div>

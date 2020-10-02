@@ -19,9 +19,9 @@ const Task = () => {
         <div className="contGeneralTask">         
             <div>
             <div className="contTask">
-                <NavLink to='/CrearTeam'>
+              {/*   <NavLink to='/CrearTeam'> */}
                 <img src={plugin} alt='logo' className="logoplugin"/>
-                </NavLink>
+               {/*  </NavLink> */}
             </div>
                 <p className="namelogoplugin">Crear Team</p>
             </div>

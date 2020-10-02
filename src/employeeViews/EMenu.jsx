@@ -1,12 +1,13 @@
 import React from 'react'
 import '../css/menu.css';
-import perfil from '../img/perfil.png'
-import single from '../img/single.png'
+import perfil from '../img/single.png'
+import map from '../img/map.png'
 import team from '../img/team.png';
 import cake from '../img/cake.png';
-import spaceship from '../img/spaceship.png';
-import message from '../img/message.png';
+import flag from '../img/flag.png';
+import gift from '../img/gift-box.png';
 import { NavLink} from 'react-router-dom'
+import SignOff from '../components/SignOff';
 
 const EMenu = () => {
     return (
@@ -25,7 +26,7 @@ const EMenu = () => {
             <div>
                 <div className="circlemenu">
                     <NavLink to='/EmployeeMap'>
-                    <img src={single} alt='logo' className="logomenu"/>
+                    <img src={map} alt='logo' className="logomenu"/>
                     </NavLink>
                 </div>
                 <p className="nameMenu">Mi Mapa</p>
@@ -33,26 +34,26 @@ const EMenu = () => {
 
             <div>
             <div className="circlemenu">
-                <NavLink to=''>
-                <img src={message} alt='logo' className="logomenu"/>
-                </NavLink>
+              {/*   <NavLink to=''> */}
+                <img src={team} alt='logo' className="logomenu"/>
+             {/*    </NavLink> */}
             </div>
                 <p className="nameMenu">Mi Team</p>
             </div>
 
             <div>
                 <div className="circlemenu">
-                    <NavLink to=''>
-                    <img src={spaceship} alt='logo' className="logomenu"/>
-                    </NavLink>
+                   {/*  <NavLink to=''> */}
+                    <img src={flag} alt='logo' className="logomenu"/>
+                 {/*    </NavLink> */}
                 </div>
                 <p className="nameMenu">Mi Avance</p>
             </div>
 
             <div>
                 <div className="circlemenu">
-                    <NavLink to=''>
-                    <img src={team} alt='logo' className="logomenu"/>
+                    <NavLink to='/EmployeeCanje'>
+                    <img src={gift} alt='logo' className="logomenu"/>
                     </NavLink>
                 </div>
                 <p className="nameMenu">Canjear Premio</p>
@@ -60,13 +61,14 @@ const EMenu = () => {
 
             <div>
                 <div className="circlemenu">
-                    <NavLink to=''>
+                   {/*  <NavLink to=''> */}
                     <img src={cake} alt='logo' className="logomenu"/>
-                    </NavLink>
+                  {/*   </NavLink> */}
                 </div>
                     <p className="nameMenu">Cumpleaños</p>
             </div>
         </div>
+        <SignOff />
     </div>
     )
 }

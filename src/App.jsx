@@ -23,6 +23,7 @@ import EMenu from './employeeViews/EMenu';
 import EmployeeMap from './components/EmployeeMap';
 import { auth} from './firebase'
 import Canje from './components/Canje';
+import CanjeE from './components/CanjeE';
 
 function App() {
 
@@ -86,6 +87,9 @@ function App() {
         </Route>
         <Route path="/EmployeeProfile">
           <EProfile/>
+        </Route>
+        <Route path="/EmployeeCanje">
+          <CanjeE />
         </Route>
 {/*         <Route path="/EmployeeMap">
           <EMap/>
