@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import Footer from '../components/Footer'
 import { db, auth } from '../firebase'
+import NavbarPage from '../leaderViews/NavbarPage'
+import '../css/login.css'
 
 
 const Login = (props) => {
@@ -60,21 +63,26 @@ const Login = (props) => {
 
     return (
         <Fragment>
-               <div >
+            <NavbarPage/>
+               <div className="contLogin">
                   <div >
                       <form onSubmit={procesarDatos} className="formLogin" >
                           <div className="alert alert-danger">
                               {error}
                           </div>
                           <div>
+                              <p className="titleLogin">E-MAIL</p>
                               <input
+                                  className="inputLogin"
                                   placeholder="Correo electronico"
                                   type="email"
                                   onChange={e => setEmail(e.target.value)}
                                   value={email} />
                           </div>
                           <div>
+                              <p className="titleLogin">CONTRASEÑA</p>
                               <input
+                                  className="inputLogin"
                                   placeholder="Contraseña"
                                   type="password"
                                   onChange={e => setPass(e.target.value)}
@@ -82,6 +90,7 @@ const Login = (props) => {
                           </div>
                           <div>
                               <button
+                              className="btnIniSesion"
                                   onClick={() => login()}
                               >Iniciar sesion</button>
                           </div>
@@ -89,11 +98,12 @@ const Login = (props) => {
                           <Link to="/password"> <p>¿Olvidó su Contraseña? </p></Link>
                           </div>
                           <div>
-                          <Link to='/registro' ><button id="botonRegistrate"> Registro</button></Link>
+                          <Link to='/registro' ><button id="botonRegistrate" className="btnIniSesion"> Registro</button></Link>
                           </div>
                       </form>
                   </div>
               </div> 
+              <Footer/>
             </Fragment>
     )
 }

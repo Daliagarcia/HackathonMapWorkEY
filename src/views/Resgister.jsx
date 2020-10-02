@@ -8,6 +8,9 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import DateFnsUtils from '@date-io/date-fns';
 import Button from '@material-ui/core/Button';
+import NavbarPage from '../leaderViews/NavbarPage';
+import Footer from '../components/Footer';
+import '../css/register.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -102,6 +105,8 @@ const Resgister = (props) => {
 
   return (
     <>
+    <NavbarPage/>
+    <div className="contInfoRegister">
     <form className={classes.root} noValidate autoComplete="off"
     onSubmit={procesarDatos}  
     style={{
@@ -110,9 +115,14 @@ const Resgister = (props) => {
       alignItems: 'center',
       marginTop: '144px',
     }}>
-        <div className="alert alert-danger">{error}</div>
-          <TextField
-            label="Nombre"
+        
+        {/* { error ? (<div className="alert alert-danger">{error}</div>)  } */}
+        <p className="titleRegisterName">NOMBRE DE USUARIO</p>
+          <input
+            type="text"
+            placeholder="Escribe aqui tu nombre"
+            className="inputRegister"
+            /* label="Escribe aqui tu nombre" */
             id="outlined-size-small"
             /* defaultValue="Small"  */
             variant="outlined"
@@ -120,8 +130,12 @@ const Resgister = (props) => {
             onChange={e => setName(e.target.value)}
             value={name} 
           />
-          <TextField
-            label="Correo Electrónico"
+          <p className="titleRegisterE">E-MAIL</p>
+          <input
+            type="text"
+            placeholder="example@ey.com"
+            className="inputRegister"
+            /* label="example@ey.com" */
             id="outlined-size-small"
           /*  defaultValue="Small" */
             variant="outlined"
@@ -130,8 +144,12 @@ const Resgister = (props) => {
             value={email} 
             type="email"
           />
-          <TextField
-            label="Contraseña"
+          <p className="titleRegister">ESCRIBE TU CONTRASENA</p>
+          <input
+            type="text"
+            placeholder="Escribe aqui tu contraseña"
+            className="inputRegister"
+            /* label="Escribe aqui tu contraseña" */
             id="outlined-size-small"
           /*  defaultValue="Small" */
             variant="outlined"
@@ -156,7 +174,7 @@ const Resgister = (props) => {
             </NativeSelect>
           </div>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
+            {/* <KeyboardDatePicker
               margin="normal"
               id="date-picker-dialog"
               label="Fecha de nacimiento"
@@ -166,12 +184,24 @@ const Resgister = (props) => {
               KeyboardButtonProps={{
                 'aria-label': 'change date',
               }}
+            /> */}
+            
+              <input 
+              type="date"
+              placeholder="Fecha"
+              className="inputTareaR"
+              onChange={handleDateChange}
+              value={birthday}
             />
+
+
         </MuiPickersUtilsProvider>
-        <Button variant="contained" color="secondary" onClick={() => register()}>
-          Registrar
+        <Button variant="contained" className="btnregisterUser" onClick={() => register()}>
+          Registrarse
         </Button>
       </form>
+      </div>
+      <Footer/>
     </>
   )
 }
