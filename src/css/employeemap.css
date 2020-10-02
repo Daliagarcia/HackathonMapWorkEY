@@ -1,0 +1,69 @@
+.contButtonMap{
+    display: flex;
+    justify-content: space-around;
+    width: 98%;
+    height: 14vh;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.btnVolver{
+    width: 150px;
+    height: 40px;
+    background: #FFFFFF;
+    filter: drop-shadow(0px 0px 9px #E8DB65);
+    border-radius: 20px;
+    border: none; 
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+
+.btnVolver:hover{
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 9px #E8DB65);
+    border-radius: 20px;
+}
+.btncanjear{
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 5px #55544e);
+    border-radius: 20px;
+    border: none;  
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+.btncanjear:hover{
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 9px #E8DB65);
+    border-radius: 20px;
+}
+
+.starmodal{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.buttonTexArear{
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 5px #55544e);
+    border-radius: 20px;
+    border: none;  
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+
+.contestar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contbotonmodal{
+    display: flex;
+    justify-content: center;
+}
+
+.simple-modal-description{
+    text-align: center;
+}

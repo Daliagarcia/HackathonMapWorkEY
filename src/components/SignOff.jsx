@@ -15,9 +15,9 @@ class SignOff extends React.Component {
     render() {
       return (
         <>
-             <span className={this.getNavLinkClass("/login")} onClick={() => this.logOut("/login")}>
-              <NavLink to="/login">
-                <p>Cerrar sesión</p>
+             <span className={this.getNavLinkClass("/")} onClick={() => this.logOut("/login")}>
+              <NavLink to="/">
+                <button className="btncanjear">Cerrar sesión</button>
               </NavLink>
             </span>
         </>

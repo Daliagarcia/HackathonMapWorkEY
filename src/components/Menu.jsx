@@ -7,6 +7,7 @@ import cake from '../img/cake.png';
 import spaceship from '../img/spaceship.png';
 import message from '../img/message.png';
 import { NavLink} from 'react-router-dom'
+import SignOff from './SignOff';
 
 const Menu = () => {
     return (
@@ -24,18 +25,18 @@ const Menu = () => {
 
             <div>
                 <div className="circlemenu">
-                    <NavLink to='/Single'>
+                   {/*  <NavLink to='/Single'> */}
                     <img src={single} alt='logo' className="logomenu"/>
-                    </NavLink>
+               {/*      </NavLink> */}
                 </div>
                 <p className="nameMenu">Single</p>
             </div>
 
             <div>
             <div className="circlemenu">
-                <NavLink to='/Feedback'>
+                {/* <NavLink to='/Feedback'> */}
                 <img src={message} alt='logo' className="logomenu"/>
-                </NavLink>
+             {/*    </NavLink> */}
             </div>
                 <p className="nameMenu">Feedback</p>
             </div>
@@ -51,22 +52,23 @@ const Menu = () => {
 
             <div>
                 <div className="circlemenu">
-                    <NavLink to='/Team'>
+                    {/* <NavLink to='/Team'> */}
                     <img src={team} alt='logo' className="logomenu"/>
-                    </NavLink>
+                   {/*  </NavLink> */}
                 </div>
                 <p className="nameMenu">Team</p>
             </div>
 
             <div>
                 <div className="circlemenu">
-                    <NavLink to='/birthday'>
+                 {/*    <NavLink to='/birthday'> */}
                     <img src={cake} alt='logo' className="logomenu"/>
-                    </NavLink>
+                  {/*   </NavLink> */}
                 </div>
                     <p className="nameMenu">Cumpleanos</p>
             </div>
         </div>
+        <SignOff />
     </div>
     )
 }

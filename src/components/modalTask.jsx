@@ -53,7 +53,6 @@ const modalTask = () => {
                     </Button>
                     </DialogActions>
                 </Dialog>
-    
         </>
     )
 }

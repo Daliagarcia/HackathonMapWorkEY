@@ -22,6 +22,7 @@ import AddTaks from './components/AddTaks';
 import EMenu from './employeeViews/EMenu';
 import EmployeeMap from './components/EmployeeMap';
 import { auth} from './firebase'
+import Canje from './components/Canje';
 
 function App() {
 
@@ -67,6 +68,9 @@ function App() {
         </Route>
         <Route path="/Feedback">
           <Feedback/>
+        </Route>
+        <Route path="/Canje">
+          <Canje />
         </Route>
         <Route path="/EmployeeMenu">
           <EMenu />

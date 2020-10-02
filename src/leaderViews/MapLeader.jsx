@@ -8,7 +8,6 @@ const MapLeader = () => {
   return (
     <div>
       <NavbarPage/>
-      <h1>Soy Mapa</h1>
       <EmployeeMap />
       <SignOff />
     </div>

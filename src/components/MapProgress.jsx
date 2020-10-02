@@ -6,7 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { NavLink} from 'react-router-dom'
 import { CheckBox } from "@material-ui/icons";
 import "../css/emap.css"
 
@@ -35,8 +35,8 @@ export const MapProgress = ({ tasks = [], onTaskChange, handleOpen}) => {
     // }
   }
   return (
-    <div>
-      <h1>Aquí verás el mapa de trabajo</h1>
+    <div className="contgeneralmap">
+      <h3>Mapa de Tareas</h3>
       <VerticalTimeline>
         {tasks.map((task, index) => {
           const styles = task.completed ? completedTaskStyles : incompletedTaskStyles
@@ -51,13 +51,31 @@ export const MapProgress = ({ tasks = [], onTaskChange, handleOpen}) => {
               <p>
                 {task.descriptionTask}
               </p>
-              <input 
+              {task.completed ? <h4>Tarea Completada</h4> : <h4>Pendiente</h4>}
+                {task.completed ? null : <input 
                 type = "checkbox"
-                onChange = {(event)=> oncheckBoxChange(event.target.value, task)} />
+                onChange = {(event)=>
+                oncheckBoxChange(event.target.value, task)} />}
+
+              {/* <input 
+                type = "checkbox"
+                onChange = {(event)=> oncheckBoxChange(event.target.value, task)} /> */}
             </VerticalTimelineElement>
           );
         })}
-      </VerticalTimeline>      
+      </VerticalTimeline>     
+      <div className="contButtonMap">
+        <NavLink to='/Menu'>
+          <button className="btnVolver">
+            Volver
+          </button>
+        </NavLink>
+        <NavLink to='/Canje'>
+          <button className="btncanjear">
+            Canjear Premio
+          </button>
+        </NavLink>
+      </div> 
     </div>
   );
 };

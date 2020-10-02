@@ -1,3 +1,6 @@
+.contgeneralmap{
+  background-color: #FFF280;
+}
 .contMap{
     display: flex;
     flex-wrap: wrap;

@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink} from 'react-router-dom'
 import DataEmployeeMap from '../data/employee-tasks.json';
 import { MapProgress }from '../../src/components/MapProgress';
 import { makeStyles } from '@material-ui/core/styles';
 import { Modal } from '@material-ui/core';
-
+import Footer from '../components/Footer'
+import "../css/employeemap.css"
+import estrella from '../img/star.png'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
     width: 400,
     backgroundColor: theme.palette.background.paper,
+    backgroundColor: '#E5E5E5',
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+ 
   },
 }));
 
@@ -74,8 +79,14 @@ export const EmployeeMap = () =>{
 
   const body = (
     <div className={`${classes.paper} center`}>
-      <h2 id="simple-modal-title">¡Felicidades!</h2>
-      <p id="simple-modal-description">
+    
+      <h2 id="simple-modal-title" style={{textAlign:'center'}}>¡Felicidades!</h2>
+      <div className="contestar">
+        <img src={estrella} alt="" className="starmodal"/>
+        <img src={estrella} alt="" className="starmodal"/>
+        <img src={estrella} alt="" className="starmodal"/>
+      </div>
+      <p id="simple-modal-description" style={{textAlign:'center'}}>
         Cumpliste con tu tarea de manera exitosa 
       </p>
 
@@ -83,10 +94,11 @@ export const EmployeeMap = () =>{
         placeholder="Cuentanos cómo lograste cumplir con tu tarea asignada"
         className="textAreaModal">
       </textarea>
-
-      <button className="buttonTexArea"
-      onClick={completedTask}> Enviar
-      </button>
+      <div className="contbotonmodal">
+        <button className="buttonTexArear"
+            onClick={completedTask}> Enviar
+        </button>
+      </div>
     </div>
   );
     
@@ -99,11 +111,12 @@ export const EmployeeMap = () =>{
         aria-describedby="simple-modal-description">
         {body}
       </Modal>
-      <p>Creando mapa de trabajo</p>
         <MapProgress
           tasks={state.tasks} 
           onTaskChange ={onTaskChange}
           handleOpen = {handleOpen}/>
+  
+        <Footer />
     </div>
   )
 };
