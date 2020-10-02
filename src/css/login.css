@@ -1,0 +1,38 @@
+.contLogin{
+    background-color: #FFF280;
+    height: 83vh;
+}
+
+.btnIniSesion{
+    margin-top: 33px;
+    width: 162px;
+    height: 40px;
+    border-radius: 20px;
+    border: none; 
+    font-family: 'Montserrat';
+    font-size: 18px;
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 9px #E8DB65);
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputLogin{
+    width: 280px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.titleLogin{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: 5px;
+}
+

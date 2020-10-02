@@ -24,3 +24,35 @@
     filter: drop-shadow(0px 0px 9px #E8DB65);
     border-radius: 20px;
 }*/
+
+.inputRegister{
+    width: 280px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'open sans';
+}
+
+.titleRegisterName{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: -105px;
+}
+.titleRegister{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: -79px;
+}
+
+.titleRegisterE{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: -217px;
+}
+
+.inputTareaR {
+    width: 280px;
+    background-color: white;
+    padding: 7px;
+}

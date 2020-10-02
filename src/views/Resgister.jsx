@@ -115,10 +115,14 @@ const Resgister = (props) => {
       alignItems: 'center',
       marginTop: '144px',
     }}>
-        <div className="alert alert-danger">{error}</div>
-        <p>Nombre de</p>
-          <TextField
-            label="Escribe aqui tu nombre"
+        
+        {/* { error ? (<div className="alert alert-danger">{error}</div>)  } */}
+        <p className="titleRegisterName">NOMBRE DE USUARIO</p>
+          <input
+            type="text"
+            placeholder="Escribe aqui tu nombre"
+            className="inputRegister"
+            /* label="Escribe aqui tu nombre" */
             id="outlined-size-small"
             /* defaultValue="Small"  */
             variant="outlined"
@@ -126,9 +130,12 @@ const Resgister = (props) => {
             onChange={e => setName(e.target.value)}
             value={name} 
           />
-          <p>E-mail</p>
-          <TextField
-            label="example@ey.com"
+          <p className="titleRegisterE">E-MAIL</p>
+          <input
+            type="text"
+            placeholder="example@ey.com"
+            className="inputRegister"
+            /* label="example@ey.com" */
             id="outlined-size-small"
           /*  defaultValue="Small" */
             variant="outlined"
@@ -137,9 +144,12 @@ const Resgister = (props) => {
             value={email} 
             type="email"
           />
-          <p>Escribe tu</p>
-          <TextField
-            label="Escribe aqui tu contraseña"
+          <p className="titleRegister">ESCRIBE TU CONTRASENA</p>
+          <input
+            type="text"
+            placeholder="Escribe aqui tu contraseña"
+            className="inputRegister"
+            /* label="Escribe aqui tu contraseña" */
             id="outlined-size-small"
           /*  defaultValue="Small" */
             variant="outlined"
@@ -164,7 +174,7 @@ const Resgister = (props) => {
             </NativeSelect>
           </div>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
+            {/* <KeyboardDatePicker
               margin="normal"
               id="date-picker-dialog"
               label="Fecha de nacimiento"
@@ -174,7 +184,17 @@ const Resgister = (props) => {
               KeyboardButtonProps={{
                 'aria-label': 'change date',
               }}
+            /> */}
+            
+              <input 
+              type="date"
+              placeholder="Fecha"
+              className="inputTareaR"
+              onChange={handleDateChange}
+              value={birthday}
             />
+
+
         </MuiPickersUtilsProvider>
         <Button variant="contained" className="btnregisterUser" onClick={() => register()}>
           Registrarse
