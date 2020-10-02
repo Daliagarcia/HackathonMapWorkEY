@@ -1,0 +1,58 @@
+.contInfoRegister{
+    background-color: #FFF280;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 98vh;
+    margin-top: -97px;
+}
+
+.btnregisterUser{
+    margin-top: 33px;
+    width: 162px;
+    height: 40px;
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 9px #E8DB65);
+    border-radius: 30px;
+    border: none; 
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+/*.btnregisterUser:hover{
+    background: linear-gradient(180deg, #FEE600 99.99%, rgba(254, 230, 0, 0) 100%);
+    filter: drop-shadow(0px 0px 9px #E8DB65);
+    border-radius: 20px;
+}*/
+
+.inputRegister{
+    width: 280px;
+    height: 40px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'open sans';
+}
+
+.titleRegisterName{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: -105px;
+}
+.titleRegister{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: -79px;
+}
+
+.titleRegisterE{
+    font-family: 'open sans';
+    font-weight: 700;
+    margin-left: -217px;
+}
+
+.inputTareaR {
+    width: 280px;
+    background-color: white;
+    padding: 7px;
+}
